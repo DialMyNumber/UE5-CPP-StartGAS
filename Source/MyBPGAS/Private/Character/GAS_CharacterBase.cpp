@@ -48,3 +48,11 @@ UAbilitySystemComponent* AGAS_CharacterBase::GetAbilitySystemComponent() const
 {
 	return AbilitySystemComponent;
 }
+
+void AGAS_CharacterBase::PossessedBy(AController* NewConroller)
+{
+	Super::PossessedBy(NewConroller);
+
+	// 누가 소유자인지, 누가 사용중인 캐릭터인지 등
+	AbilitySystemComponent->InitAbilityActorInfo(this, this);
+}
