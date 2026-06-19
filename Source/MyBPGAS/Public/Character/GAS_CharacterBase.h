@@ -35,4 +35,8 @@ protected:
 	// HP, MP 같은 변수들이 이 컴포넌트에 붙음
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
 	TObjectPtr<UAbilitySystemComponent> AbilitySystemComponent;
+
+public:
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "AbilitySystem")
+	TObjectPtr<class UGAS_AttributeSetBase> AttributeSet;
 };

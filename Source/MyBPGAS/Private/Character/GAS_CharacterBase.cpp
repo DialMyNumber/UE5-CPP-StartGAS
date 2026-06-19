@@ -4,6 +4,8 @@
 #include "Components/CapsuleComponent.h" 
 #include "GameFramework/CharacterMovementComponent.h"
 
+#include "AttributeSet/GAS_AttributeSetBase.h"
+
 
 AGAS_CharacterBase::AGAS_CharacterBase()
 {
@@ -23,6 +25,8 @@ AGAS_CharacterBase::AGAS_CharacterBase()
 	GetCharacterMovement()->BrakingDecelerationFalling = 1500.f;
 
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
+
+	AttributeSet = CreateDefaultSubobject<UGAS_AttributeSetBase>(TEXT("GASAttributeSetBase"));
 }
 
 void AGAS_CharacterBase::BeginPlay()
