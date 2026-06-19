@@ -30,6 +30,10 @@ protected:
 
 	virtual void PossessedBy(AController* NewConroller) override;
 
+public:
+	UFUNCTION(BlueprintCallable)
+	void MyApplyDamage(float DamageAmount);
+
 protected:
 	// 캐릭터 하나당 하나씩 붙는 AbilitySystemComponent
 	// HP, MP 같은 변수들이 이 컴포넌트에 붙음

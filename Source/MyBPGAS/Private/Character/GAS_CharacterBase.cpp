@@ -60,3 +60,10 @@ void AGAS_CharacterBase::PossessedBy(AController* NewConroller)
 	// 누가 소유자인지, 누가 사용중인 캐릭터인지 등
 	AbilitySystemComponent->InitAbilityActorInfo(this, this);
 }
+
+// 기존에 사용하던 ApplyDamage, GameplayEffect를 사용하지 않고 SetHP로 직접 값 변경 시도 (권장x)
+void AGAS_CharacterBase::MyApplyDamage(float DamageAmount)
+{
+	float NewHP = AttributeSet->GetHP() - DamageAmount;
+	AttributeSet->SetHP(NewHP); // 직접 값을 변경하는 권장하지 않는 코드
+}
