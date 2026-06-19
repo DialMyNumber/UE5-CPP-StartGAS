@@ -15,7 +15,6 @@ void UGA_Flash::ActivateAbility(
 	FVector TargetLocation = (AvatarActor->GetActorForwardVector() * 500.f) 
 		+ AvatarActor->GetActorLocation();
 
-
 	UAbilityTask_MoveToLocation* MoveToLocation = UAbilityTask_MoveToLocation::MoveToLocation(
 		this,
 		NAME_None,
