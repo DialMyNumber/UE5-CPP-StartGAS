@@ -41,7 +41,7 @@ public:
 	// 값이 바뀌기 직전 호출
 	// GetHPAttribute() 등의 함수를 Attribute에 인자로 넘겨주고, NewValue 값과 비교 가능
 	// 힐을 받아서 HP가 MaxHP를 넘지 않도록, 데미지를 받아서 HP가 0 아래로 떨어지지 않도록 Clamp 기능 등
-	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue)override;
+	virtual void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
 
 	// 값이 바뀐 직후 호출
 	// 바뀌기 전 OldValue와 NewValue를 이용해서
